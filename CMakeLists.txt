@@ -14,6 +14,7 @@ add_executable(statistics
     src/statistic/max.cpp
     src/statistic/mean.cpp
     src/statistic/std.cpp
+    src/statistic/pct.cpp
 )
 
 target_include_directories(statistics PRIVATE

@@ -4,16 +4,18 @@
 #include "max.h"
 #include "mean.h"
 #include "std.h"
+#include "pct.h"
 
 int main() {
-    const size_t statistics_count = 4;
+    const size_t statistics_count = 6;
 	IStatistics *statistics[statistics_count];
 
 	statistics[0] = new Min{};
 	statistics[1] = new Max{};
 	statistics[2] = new Mean{};
 	statistics[3] = new Std{};
-
+	statistics[4] = new Pct{};
+	statistics[5] = new Pct{95};
 
 	double val = 0;
 	while (std::cin >> val) {
