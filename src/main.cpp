@@ -6,7 +6,8 @@
 #include "std.h"
 #include "pct.h"
 
-int main() {
+
+int main() try {
     const size_t statistics_count = 6;
 	IStatistics *statistics[statistics_count];
 
@@ -41,4 +42,8 @@ int main() {
 	}
 
 	return 0;
+} catch (std::invalid_argument const& ex) {
+	std::cout << std::endl << "Error: " << ex.what() << std::endl;
+} catch (...) {
+	std::cout << std::endl << "Error: unhandled exception" << std::endl;
 }
