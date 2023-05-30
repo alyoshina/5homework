@@ -5,7 +5,7 @@
 
 Max::Max() 
     : is_empty{true}
-    , m_max{std::numeric_limits<double>::min()} 
+    , m_max{std::numeric_limits<double>::lowest()} 
 {}
 
 Max::~Max() {}
